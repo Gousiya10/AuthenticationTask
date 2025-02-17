@@ -1,0 +1,24 @@
+{% extends "base.html" %} 
+{% block content %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body>
+    <section id="container-signup">
+      <h2>Sign-Up Form</h2>
+      <form method="POST">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit" id='su-btn'>Submit</button>
+      </form>
+    </section>
+  </body>
+</html>
+{% endblock %}
